@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MusicApp.Views.InitialPage"
+             Title="InitialPage"
+             Shell.NavBarIsVisible="False">
+    <ScrollView>
+        <VerticalStackLayout BackgroundColor="{StaticResource BackgroundBlue}">
+            <Grid ColumnDefinitions="*" RowDefinitions="Auto, *">
+                <Image Source="img_girl.png"
+                       Aspect="AspectFill"
+                       HeightRequest="420"
+                       Margin="0, 60, 0, 0"
+                       HorizontalOptions="Fill"
+                       Grid.Row="0" Grid.Column="0"/>
+
+                <!-- TranslationY negativo puxa o card pra cima, sobrepondo a imagem,
+                     sem alterar o espaço reservado no layout (por isso não "empurra" nada) -->
+                <Border BackgroundColor="Black"
+                        HeightRequest="400"
+                        Stroke="Black"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="End"
+                        TranslationY="-50"
+                        Grid.Row="1" Grid.Column="0">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="54, 54, 0, 0"/>
+                    </Border.StrokeShape>
+
+                    <!-- Spacing controla a distância entre os itens em vez de Margin espalhado -->
+                    <VerticalStackLayout Spacing="16" Padding="24, 36, 24, 24">
+
+                        <Label FontFamily="DidactGothic"
+                               FontSize="26"
+                               LineHeight="1.3"
+                               HorizontalOptions="Center"
+                               HorizontalTextAlignment="Center"
+                               VerticalTextAlignment="Center">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="From the " TextColor="White"/>
+                                    <Span Text="latest " TextColor="#76D7E6"/>
+                                    <Span Text="to the " TextColor="White"/>
+                                    <Span Text="greatest " TextColor="White"/>
+                                    <Span Text="hits, play your favorite tracks on " TextColor="White"/>
+                                    <Span Text="musicium " TextColor="{StaticResource TextBlue}"/>
+                                    <Span Text="now!" TextColor="White"/>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+
+                        <BoxView Color="{StaticResource DarkBlue}"
+                                 WidthRequest="100"
+                                 HeightRequest="4"
+                                 CornerRadius="2"
+                                 HorizontalOptions="Center"/>
+
+                        <Button Text="Get Started"
+                                BackgroundColor="{StaticResource ButtonBlue}"
+                                CornerRadius="50"
+                                HorizontalOptions="Fill"
+                                HeightRequest="59"
+                                Margin="0, 12, 0, 0"
+                                Clicked="Button_Clicked"/>
+
+                        <HorizontalStackLayout HorizontalOptions="Center"
+                                                Spacing="52"
+                                                Margin="0, 20, 0, 4">
+                            <ImageButton Source="vector.png" HeightRequest="24" WidthRequest="24"/>
+                            <ImageButton Source="vector_1.png" HeightRequest="24" WidthRequest="24"/>
+                            <ImageButton Source="vector_2.png" HeightRequest="24" WidthRequest="24"/>
+                        </HorizontalStackLayout>
+
+                    </VerticalStackLayout>
+                </Border>
+            </Grid>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

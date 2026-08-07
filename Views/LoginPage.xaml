@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MusicApp.Views.LoginPage"
+             Title="LoginPage"
+             Shell.NavBarIsVisible="True"
+             Background="#121111">
+    <ScrollView>
+        <VerticalStackLayout Spacing="20">
+            <Image Source="logo.png" HorizontalOptions="Center" VerticalOptions="Center"/>
+            <Label Text="Login to your account" FontFamily="DidactGothic" FontSize="32" TextColor="White" VerticalOptions="Center" HorizontalOptions="Center"/>
+            <Border Stroke="#DBE7E8" 
+                StrokeThickness="1"
+                HorizontalOptions="Center" 
+                WidthRequest="300">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="20"/>
+                </Border.StrokeShape>
+                <HorizontalStackLayout Padding="15,5" Spacing="10" VerticalOptions="Center">
+                    <Image Source="mail.png" 
+                        WidthRequest="17"
+                           
+                        HeightRequest="17"
+                        VerticalOptions="Center"
+                        BackgroundColor="Transparent"/>
+                    <Entry Placeholder="Email" 
+                        PlaceholderColor="#A0A0A0"
+                        VerticalTextAlignment="Center"
+                        ClearButtonVisibility="Never"
+                        TextColor="White"
+                        WidthRequest="235"/>
+                </HorizontalStackLayout>
+            </Border>
+
+            <HorizontalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="10">
+                <BoxView Color="White"
+                    WidthRequest="150"
+                    HeightRequest="4"
+                    CornerRadius="2"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"/>
+                <Label Text="or" TextColor="White" HorizontalOptions="Center"/>
+                <BoxView Color="White"
+                    WidthRequest="150"
+                    HeightRequest="4"
+                    CornerRadius="2"
+                    HorizontalOptions="Center"
+                     VerticalOptions="Center"/>
+            </HorizontalStackLayout>
+            <Button Text="Log in with a password"
+                BackgroundColor="{StaticResource ButtonBlue}"
+                CornerRadius="50"
+                HorizontalOptions="Fill"
+                HeightRequest="59"
+                Margin="0, 12, 0, 0"
+                WidthRequest="377"
+            />
+            <Label FontFamily="DidacticGothic" HorizontalOptions="Center" FontSize="16">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Don’t have an account? " TextColor="White"/>
+                        <Span Text="Sign Up" TextColor="#06A0B5"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
