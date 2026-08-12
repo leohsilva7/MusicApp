@@ -6,55 +6,138 @@
              Shell.NavBarIsVisible="True"
              Background="#121111">
     <ScrollView>
-        <VerticalStackLayout Spacing="20">
+        <VerticalStackLayout Spacing="20" Padding="0,20">
             <Image Source="logo.png" HorizontalOptions="Center" VerticalOptions="Center"/>
-            <Label Text="Login to your account" FontFamily="DidactGothic" FontSize="32" TextColor="White" VerticalOptions="Center" HorizontalOptions="Center"/>
+
+            <Label Text="Login to your account" 
+                   FontFamily="DidactGothic" 
+                   FontSize="32" 
+                   TextColor="White" 
+                   VerticalOptions="Center" 
+                   HorizontalOptions="Center"/>
+
             <Border Stroke="#DBE7E8" 
-                StrokeThickness="1"
-                HorizontalOptions="Center" 
-                WidthRequest="300">
+                    StrokeThickness="1"
+                    HorizontalOptions="Center" 
+                    WidthRequest="377">
                 <Border.StrokeShape>
                     <RoundRectangle CornerRadius="20"/>
                 </Border.StrokeShape>
                 <HorizontalStackLayout Padding="15,5" Spacing="10" VerticalOptions="Center">
                     <Image Source="mail.png" 
-                        WidthRequest="17"
-                           
-                        HeightRequest="17"
-                        VerticalOptions="Center"
-                        BackgroundColor="Transparent"/>
+                           WidthRequest="17"
+                           HeightRequest="17"
+                           VerticalOptions="Center"
+                           BackgroundColor="Transparent"/>
                     <Entry Placeholder="Email" 
-                        PlaceholderColor="#A0A0A0"
-                        VerticalTextAlignment="Center"
-                        ClearButtonVisibility="Never"
-                        TextColor="White"
-                        WidthRequest="235"/>
+                           PlaceholderColor="#A0A0A0"
+                           VerticalTextAlignment="Center"
+                           ClearButtonVisibility="Never"
+                           TextColor="White"
+                           WidthRequest="320"/>
                 </HorizontalStackLayout>
             </Border>
 
-            <HorizontalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="10">
-                <BoxView Color="White"
-                    WidthRequest="150"
-                    HeightRequest="4"
-                    CornerRadius="2"
-                    HorizontalOptions="Center"
-                    VerticalOptions="Center"/>
-                <Label Text="or" TextColor="White" HorizontalOptions="Center"/>
-                <BoxView Color="White"
-                    WidthRequest="150"
-                    HeightRequest="4"
-                    CornerRadius="2"
-                    HorizontalOptions="Center"
-                     VerticalOptions="Center"/>
+            <Border Stroke="#DBE7E8" 
+                    StrokeThickness="1"
+                    HorizontalOptions="Center" 
+                    WidthRequest="377">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="20"/>
+                </Border.StrokeShape>
+                <HorizontalStackLayout Padding="15,5" Spacing="10" VerticalOptions="Center">
+                    <Image Source="lock.png" 
+                           WidthRequest="17"
+                           HeightRequest="17"
+                           VerticalOptions="Center"
+                           BackgroundColor="Transparent"/>
+                    <Entry Placeholder="Password"
+                           IsPassword="True"
+                           PlaceholderColor="#A0A0A0"
+                           VerticalTextAlignment="Center"
+                           ClearButtonVisibility="Never"
+                           TextColor="White"
+                           WidthRequest="320"/>
+                </HorizontalStackLayout>
+            </Border>
+
+            <HorizontalStackLayout WidthRequest="377" HorizontalOptions="Center">
+                <CheckBox Color="{StaticResource ButtonBlue}" HorizontalOptions="Start" VerticalOptions="Center"/>
+                <Label Text="Remember me" TextColor="White" FontFamily="DidacthicGothic" FontSize="16" HorizontalOptions="Start" VerticalOptions="Center"/>
             </HorizontalStackLayout>
-            <Button Text="Log in with a password"
-                BackgroundColor="{StaticResource ButtonBlue}"
-                CornerRadius="50"
-                HorizontalOptions="Fill"
-                HeightRequest="59"
-                Margin="0, 12, 0, 0"
-                WidthRequest="377"
-            />
+
+            <Button Text="Log in"
+                    BackgroundColor="{StaticResource ButtonBlue}"
+                    CornerRadius="50"
+                    HorizontalOptions="Center"
+                    HeightRequest="59"
+                    WidthRequest="377"/>
+
+            <Label Text="Forgot the password?" 
+                   TextColor="{StaticResource ButtonBlue}" 
+                   HorizontalOptions="Center" 
+                   FontFamily="DidacthicGothic" 
+                   FontSize="16"/>
+
+            <HorizontalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="10">
+                <BoxView Color="#2B2B2B"
+                         WidthRequest="100"
+                         HeightRequest="1"
+                         VerticalOptions="Center"/>
+                <Label Text="or continue with" TextColor="#A0A0A0" FontSize="14" HorizontalOptions="Center"/>
+                <BoxView Color="#2B2B2B"
+                         WidthRequest="100"
+                         HeightRequest="1"
+                         VerticalOptions="Center"/>
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout HorizontalOptions="Center" Spacing="20" Margin="0,5">
+                <Border WidthRequest="60"
+                        HeightRequest="60"
+                        Stroke="#2B2B2B"
+                        StrokeThickness="1"
+                        BackgroundColor="#1E1E1E">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="30" />
+                    </Border.StrokeShape>
+                    <Image Source="google.png"
+                           WidthRequest="26"
+                           HeightRequest="26"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center" />
+                </Border>
+
+                <Border WidthRequest="60"
+                        HeightRequest="60"
+                        Stroke="#2B2B2B"
+                        StrokeThickness="1"
+                        BackgroundColor="#1E1E1E">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="30" />
+                    </Border.StrokeShape>
+                    <Image Source="fb.png"
+                           WidthRequest="26"
+                           HeightRequest="26"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center" />
+                </Border>
+
+                <Border WidthRequest="60"
+                        HeightRequest="60"
+                        Stroke="#2B2B2B"
+                        StrokeThickness="1"
+                        BackgroundColor="#1E1E1E">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="30" />
+                    </Border.StrokeShape>
+                    <Image Source="apple.png"
+                           WidthRequest="26"
+                           HeightRequest="26"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center" />
+                </Border>
+            </HorizontalStackLayout>
+
             <Label FontFamily="DidacticGothic" HorizontalOptions="Center" FontSize="16">
                 <Label.FormattedText>
                     <FormattedString>
@@ -63,6 +146,7 @@
                     </FormattedString>
                 </Label.FormattedText>
             </Label>
+
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
